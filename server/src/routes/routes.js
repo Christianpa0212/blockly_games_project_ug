@@ -1,13 +1,13 @@
+// import object router from express to create routes 
 import { Router } from "express";
+import sessionRoutes from './session/sessionRoutes.js';
 
 const router = Router();
 
+// session routes
+router.use(sessionRoutes);
 
-// Ejemplo simple
-router.get("/hello", (req, res) => {
-  res.json({ message: "Hola desde la API 🚀" });
-});
+// create a router object
+export const routes = Router();
 
 
-
-export default router;
