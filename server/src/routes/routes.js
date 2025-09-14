@@ -12,6 +12,6 @@ router.use(sessionRoutes);
 router.use(partidaRoutes);
 
 // create a router object
-export const routes = Router();
+export const routes = router;
 
 

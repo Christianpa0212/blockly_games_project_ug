@@ -1,6 +1,6 @@
 // Call variable express for initilize server
 import express from "express";
-
+import morgan from "morgan";
 // Call archive variables environment
 import { env } from "./src/config/env/env.js";
 
@@ -18,6 +18,7 @@ const __dirname = path.dirname(__filename);
 // Define function for initilize server
 const app = express();
 
+  app.use(morgan('combined'))
 
 // Middleware for JSON parsing
 app.use(express.json());
